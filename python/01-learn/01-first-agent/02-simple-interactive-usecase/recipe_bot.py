@@ -37,6 +37,7 @@ def websearch(
 
 # Create a recipe assistant agent
 recipe_agent = Agent(
+    model="amazon.nova-pro-v1:0",
     system_prompt="""You are RecipeBot, a helpful cooking assistant.
     Help users find recipes based on ingredients and answer cooking questions.
     Use the websearch tool to find recipes when users mention ingredients or to look up cooking information.""",
