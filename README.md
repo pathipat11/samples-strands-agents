@@ -1,7 +1,10 @@
 <div align="center">
   <div>
     <a href="https://strandsagents.com">
-      <img src="https://strandsagents.com/latest/assets/logo-github.svg" alt="Strands Agents" width="55px" height="105px">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://strandsagents.com/latest/assets/wordmark-github-dark.svg">
+        <img src="https://strandsagents.com/latest/assets/wordmark-github-light.svg" alt="Strands" width="320">
+      </picture>
     </a>
   </div>
 
@@ -48,7 +51,7 @@ The examples in this repository are for **demonstration and educational purposes
 
 **Prerequisites:**
 - Python 3.10 or higher
-- pip package manager
+- pip package manager (not required when using the uv alternative below)
   - Verify with: `pip --version` or `pip3 --version`
   - Usually comes bundled with Python 3.4+ installers from python.org
   - If pip is missing, install using one of these methods:
@@ -76,6 +79,32 @@ venv\Scripts\activate
 **Step 2: Install**
 ```bash
 pip install strands-agents strands-agents-tools
+```
+
+**Alternative: Use uv**
+
+If you prefer [uv](https://docs.astral.sh/uv/), install it using the [official installation instructions](https://docs.astral.sh/uv/getting-started/installation/) and follow these steps instead of Steps 1 and 2 above.
+
+Create a virtual environment:
+```bash
+uv venv
+```
+
+Activate it on macOS/Linux (bash or zsh):
+```bash
+source .venv/bin/activate
+```
+
+Or on Windows (PowerShell):
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks `Activate.ps1`, see Python's [Windows execution policy guidance](https://docs.python.org/3/library/venv.html#creating-virtual-environments) and follow any applicable organizational policies.
+
+Then install the same packages:
+```bash
+uv pip install strands-agents strands-agents-tools
 ```
 
 **Your First Agent:**
@@ -127,7 +156,7 @@ main();
 
 ### Model Provider Setup
 
-Follow the instructions [here](https://strandsagents.com/latest/user-guide/quickstart/#model-providers) to configure your model provider and model access.
+Follow the instructions [here](https://strandsagents.com/docs/user-guide/sdk/model-providers/) to configure your model provider and model access.
 
 ## Explore the Repository
 

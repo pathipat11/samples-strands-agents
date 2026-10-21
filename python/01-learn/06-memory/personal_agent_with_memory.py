@@ -30,7 +30,8 @@ import os
 from ddgs import DDGS
 from ddgs.exceptions import DDGSException, RatelimitException
 from strands import Agent, tool
-from strands_tools import http_request, mem0_memory
+from strands.vended_tools import http_request
+from strands_tools import mem0_memory
 
 # Set up environment variables for AWS credentials and OpenSearch
 
@@ -54,7 +55,7 @@ SYSTEM_PROMPT = """You are a helpful personal assistant that provides personaliz
 Capabilities:
 - Store information with mem0_memory (action="store")
 - Retrieve memories with mem0_memory (action="retrieve")
-- Search the web with duckduckgo_search
+- Search the web with the websearch tool
 
 Key Rules:
 - Be conversational and natural
